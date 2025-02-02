@@ -17,16 +17,16 @@ Step 1: Create an IAM User
 
 Step2: Attach the following AWS Managed Policies:
 
-
-AmazonEC2FullAccess
+'''AmazonEC2FullAccess
 AmazonEKSClusterPolicy
 AmazonEKSComputePolicy
 AmazonEKSWorkerNodePolicy
-Create the IAM user.
+Create the IAM user.'''
 
 Step 2: Attach Inline Policies
 
-1. EKS Policy
+EKS Policy
+'''
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -92,8 +92,9 @@ Step 2: Attach Inline Policies
     }
   ]
 }
-
-2. Logs Policy
+'''
+Logs Policy
+'''
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -117,7 +118,7 @@ Step 2: Attach Inline Policies
     }
   ]
 }
-
+'''
 Step 3: Create Access Key and Secret Key
 
 Step 4: Connect to AWS Using AWS CLI
@@ -132,6 +133,7 @@ default region (e.g., ap-south-1) when prompted.
 Step5: Create a main.tf file and add the following configuration for creating the EKS cluster.
 
 main.tf
+'''
 terraform {
   required_providers {
     aws = {
@@ -204,6 +206,7 @@ module "eks" {
     Terraform   = "true"
   }
 }
+'''
 
 Step 6: Apply below commands to create cluster
 
