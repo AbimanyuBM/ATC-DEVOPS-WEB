@@ -7,8 +7,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - web.jumpinggrab.com
-    secretName: web-app-tls  # The TLS secret we created earlier
+      - web.jumpinggrab.com
+      - grafana.jumpinggrab.com  # Add the second domain for Grafana
+    secretName: web-app-tls  # The TLS secret to be used for both domains
   rules:
   - host: web.jumpinggrab.com
     http:
@@ -20,3 +21,13 @@ spec:
             name: web-app-service
             port:
               number: 80
+  - host: grafana.jumpinggrab.com  # The new rule for Grafana
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: grafana-service  # Replace with your Grafana service name
+            port:
+              number: 3000  # Grafana's port, typically 3000
