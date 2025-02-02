@@ -4,18 +4,18 @@
 
 Before you begin, make sure you have the following installed and configured on your local machine:
 
-Terraform: Version 5.0 or higher.
+**Terraform:** Version 5.0 or higher.
 
-AWS CLI: Installed and configured with your AWS credentials.
+**AWS CLI:** Installed and configured with your AWS credentials.
 
-kubectl: Kubernetes command-line tool to manage the EKS cluster.
+**kubectl:** Kubernetes command-line tool to manage the EKS cluster.
 
 
 **Step-by-Step Guide**
 
-Step 1: Create an IAM User
+**Step 1:** Create an IAM User.
 
-Step2: Attach the following AWS Managed Policies:
+**Step2:** Attach the following AWS Managed Policies.
 ```
 AmazonEC2FullAccess
 AmazonEKSClusterPolicy
@@ -23,7 +23,7 @@ AmazonEKSComputePolicy
 AmazonEKSWorkerNodePolicy
 ```
 
-Step 2: Attach Inline Policies
+**Step 2:** Attach Inline Policies.
 
 EKS Policy
 ```
@@ -121,18 +121,18 @@ Logs Policy
   ]
 }
 ```
-Step 3: Create Access Key and Secret Key
+**Step 3:** Create Access Key and Secret Key.
 
-Step 4: Connect to AWS Using AWS CLI
+**Step 4:** Connect to AWS Using AWS CLI.
 ```
 aws configure
 ```
 Enter your Access Key,
 Secret Key,
-default region (e.g., ap-south-1) when prompted.
+default region.
 
 
-Step5: Create a main.tf file and add the following configuration for creating the EKS cluster.
+**Step 5:** Create a main.tf file and add the following configuration for creating the EKS cluster.
 
 main.tf
 ```
@@ -210,7 +210,7 @@ module "eks" {
 }
 ```
 
-Step 6: Apply below commands to create cluster
+**Step 6:** Apply below commands to create cluster.
 
 ```
 terraform init
