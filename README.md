@@ -1,4 +1,4 @@
-**Terraform - EKS Cluster Setup Documentation**
+###Terraform - EKS Cluster Setup Documentation
 
 **Prerequisites**
 
@@ -223,4 +223,12 @@ terraform validate
 ```
 ```
 terraform apply
+```
+**update kubeconfig**
+```
+aws eks update-kubeconfig --name my-cluster --region ap-south-1
+```
+**Get nodes using kubectl commands**
+```
+kubectl get nodes
 ```
