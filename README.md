@@ -232,3 +232,24 @@ aws eks update-kubeconfig --name my-cluster --region ap-south-1
 ```
 kubectl get nodes
 ```
+
+### Docker
+
+1. Go to the path where the docker file is available
+
+**Build**
+
+2. docker build -t web:latest .
+
+**Tag**
+
+3. docker tag web:latest abimanyuboominathan/demo:latest, syntax: docker tag localimagename:tagname namespace/reponame:tagname
+
+**Login dockerhub registry**
+
+4. Connect your local machine with your docker hub using this command. docker login -u abimanyuboominathan
+
+**Push**
+
+5. docker push abimanyuboominathan/demo:latest
+
