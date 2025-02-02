@@ -27,7 +27,6 @@ Create the IAM user.
 Step 2: Attach Inline Policies
 
 1. EKS Policy
-
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -95,7 +94,6 @@ Step 2: Attach Inline Policies
 }
 
 2. Logs Policy
-
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -134,7 +132,6 @@ default region (e.g., ap-south-1) when prompted.
 Step5: Create a main.tf file and add the following configuration for creating the EKS cluster.
 
 main.tf
-
 terraform {
   required_providers {
     aws = {
