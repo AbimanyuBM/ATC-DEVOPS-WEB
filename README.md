@@ -224,7 +224,7 @@ terraform validate
 ```
 terraform apply
 ```
-**update kubeconfig**
+**Update kubeconfig**
 ```
 aws eks update-kubeconfig --name my-cluster --region ap-south-1
 ```
