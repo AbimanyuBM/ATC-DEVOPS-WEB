@@ -1,0 +1,4 @@
+# certificate and key provided by namecheap
+kubectl create secret tls web-app-tls \
+  --cert=/home/azureusr/certificate.crt \
+  --key=/home/azureuser/private.key
