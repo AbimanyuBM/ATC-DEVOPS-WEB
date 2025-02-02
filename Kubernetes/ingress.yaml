@@ -28,6 +28,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: grafana-service  # Replace with your Grafana service name
+            name: grafana # Replace with your Grafana service name
             port:
               number: 3000  # Grafana's port, typically 3000
