@@ -1,0 +1,6 @@
+tls installation
+dockerhub connection
+Ingress controller installation
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
